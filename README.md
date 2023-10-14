@@ -84,7 +84,7 @@ Replace the YAML code in the file with the following example code.  This default
 
 <mark>**Make sure DIP switch 3 (PHY_POWER) is on if using Ethernet.**</mark>
 
-![](/home/dan/ESP-R8-POE-3C/images/dip1.webp)
+![](images/dip1.webp)
 
 
 
@@ -327,11 +327,11 @@ Plug a USB-A to USB-C or USB-C to USB-C cable from your computer to the USB-C po
 
 Plug a USB-Serial programming module from your computer into the H1 programming header, taking care to connect it according to the labeled pinout.  RX on the module goes to TX on the board, and vise-versa.  Connect both grounds together.  Set the module to 3.3 volts if it has such an option.
 
-![](/home/dan/ESP-R8-POE-3C/images/usb-serial.webp "USB-serial programming module")
+![](images/usb-serial.webp "USB-serial programming module")
 
 You will have to put the board into bootloader mode after powerup by holding down the "BOOT" and "EN" buttons at the same time, releasing the "EN" button, and after about two seconds, release the "BOOT" button.  After firmware flashing is complete, you will have to press the "EN" button once to reset the board.
 
-![](/home/dan/ESP-R8-POE-3C/images/buttons.webp)
+![](images/buttons.webp)
 
 
 
@@ -345,7 +345,7 @@ Supply 12 volts DC to the power input terminal, noting correct polarity.
 
 Alternatively, you can also insert the BPI-7402 module into the U1 header on the board and plug in an Ethernet cable connected to a PoE switch into the Ethernet socket.  The module will only fit one way, with the 6 pin header on the right next to the Ethernet socket and the 4 pin header on the left next to the expansion header.
 
-![](/home/dan/ESP-R8-POE-3C/images/bpi7402.webp)
+![](images/bpi7402.webp)
 
 ![](images/poe.webp)
 
@@ -459,7 +459,7 @@ The follwing section describes various components of the ESP-R8-POE-3C.
 
 ##### Configuration DIP switches
 
-![](/home/dan/ESP-R8-POE-3C/images/dip2.webp)
+![](images/dip2.webp)
 
 The bank of DIP switches on the board to the left of the battery holder is intended for enabling or disabling certain features.  They are as follows:
 
@@ -475,7 +475,7 @@ The bank of DIP switches on the board to the left of the battery holder is inten
 
 ##### Input terminals
 
-![](/home/dan/ESP-R8-POE-3C/images/input.webp)
+![](images/input.webp)
 
 The 8 input terminals across the top of the board allow you to monitor circuits for open or closure events. The inputs are normally pulled up to 3.3 volts by a resistor (logic "1/true"), and shorting an input terminal to a "C" terminal or ground will pull it low and register a logic "0/false".
 
@@ -487,13 +487,13 @@ The terminals are connected to a PCF8574 GPIO expander, which is itself connecte
 
 **Typical example:**
 
-![](/home/dan/ESP-R8-POE-3C/images/input_example.webp)
+![](images/input_example.webp)
 
 ##### 
 
 ##### GPIO terminals
 
-![](/home/dan/ESP-R8-POE-3C/images/GPIO.webp)
+![](images/GPIO.webp)
 
 
 
@@ -527,7 +527,7 @@ NC = Normally closed terminal
 
 ##### Auxiliary power output
 
-![](/home/dan/ESP-R8-POE-3C/images/antengna.webp)
+![](images/antengna.webp)
 
 The AUX terminal allows you to power external 12 volt DC devices with up to 750mA of total current. Examples of this includes alarm sirens, electric door strikes, LEDs, card readers, motion detectors, and more. A resettable fuse protects against excessive current or short circuits. 
 
@@ -535,7 +535,7 @@ The AUX terminal allows you to power external 12 volt DC devices with up to 750m
 
 ##### 12 volt DC Power input
 
-![](/home/dan/ESP-R8-POE-3C/images/power_input.webp)
+![](images/power_input.webp)
 
 This terminal allows you to power the ESP-R8-POE-3C from one of two power sources (the other being PoE from the Ethernet socket). Connect a 12 volt DC supply capable of supplying at least 2 amps of current to this terminal, making sure to observe the correct polarity as marked on the terminal. This power input may be used in conjunction with the PoE power supply as a redundancy or backup. Steering diodes on the board will prevent the power supplies from interfering with each other.
 
@@ -543,7 +543,7 @@ This terminal allows you to power the ESP-R8-POE-3C from one of two power source
 
 ##### Ethernet
 
-![](/home/dan/ESP-R8-POE-3C/images/ethernet.webp)
+![](images/ethernet.webp)
 
 Ethernet connectivity is provided by a LAN8720 Ethernet PHY IC capable of running at 100Mbit/s full duplex. It uses RMII mode for communication with the ESP32 and also uses a dedicated external 50Mhz oscillator. The following table describes the connections between the PHY and the ESP32:
 
@@ -567,9 +567,9 @@ There is a pulldown resistor on this pin to give it a default low state which di
 
 ##### PoE (Power over Ethernet)
 
-![](/home/dan/ESP-R8-POE-3C/images/bpi7402.webp)
+![](images/bpi7402.webp)
 
-![](/home/dan/ESP-R8-POE-3C/images/poe.webp)
+![](images/poe.webp)
 
 The ESP-R8-POE-3C is capable of being powered by a PoE-enabled network switch. Insert the BPI-7402 module into the U1 headers and connect one end of a CAT5e/CAT6 Ethernet cable to the Ethernet socket, and the other end to the PoE switch.
 
@@ -583,13 +583,13 @@ The board will also still provide regulated 12 volt DC power from its auxiliary 
 
 There is an oboard DS1307 RTC available for use at I2C 0x68. Insert a 3 volt CR1220 coin cell battery into the BT1 battery holder to keep time when the board is powered off.
 
-![](/home/dan/ESP-R8-POE-3C/images/battery.webp)
+![](images/battery.webp)
 
 
 
 ##### Expansion header
 
-![](/home/dan/ESP-R8-POE-3C/images/expansion.webp)
+![](images/expansion.webp)
 
 This header is meant to be used for add-on boards or custom projects/PCBS in whatever way you wish. 12 and 3.3 volts is provided as well as the I2C bus, and IO4 and IO5 ports are also broken out on the screw terminals. 
 
@@ -597,7 +597,7 @@ This header is meant to be used for add-on boards or custom projects/PCBS in wha
 
 ##### Programming header and buttons
 
-![](/home/dan/ESP-R8-POE-3C/images/buttons.webp)
+![](images/buttons.webp)
 
 Programming header H1 is provided for you to be able to use a USB-serial module for programming if for whatever reason you do not want to or cannot use the onboard USB-C port. The two buttons will allow you to manually put it into bootloader mode by holding down both at the same time, releasing the "EN" button, and then after waiting for one second, releasing the "BOOT" button. A regular reset can be done by pressing "EN" once.
 
@@ -605,7 +605,7 @@ Programming header H1 is provided for you to be able to use a USB-serial module 
 
 ##### Antenna connector
 
-![](/home/dan/ESP-R8-POE-3C/images/antenna.webp)
+![](images/antenna.webp)
 
 A standard female SMA connector is provided to have the option of using any sort of antenna you wish, as well as other equipment like Wifi amplifiers, instead of being limited to an onboard PCB antenna or U.FL connector. 
 
