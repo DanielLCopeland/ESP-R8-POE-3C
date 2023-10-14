@@ -341,7 +341,7 @@ You will have to put the board into bootloader mode after powerup by holding dow
 
 Supply 12 volts DC to the power input terminal, noting correct polarity.
 
-![](images/power.webp" alt="" data-align="inline">
+![](images/power.webp)
 
 Alternatively, you can also insert the BPI-7402 module into the U1 header on the board and plug in an Ethernet cable connected to a PoE switch into the Ethernet socket.  The module will only fit one way, with the 6 pin header on the right next to the Ethernet socket and the 4 pin header on the left next to the expansion header.
 
