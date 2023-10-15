@@ -510,7 +510,7 @@ NC = Normally closed terminal
 
 ![](images/relays.webp)
 
-<mark>**If you are planning to use inductive DC loads such as motors or solenoids, it is highly recommended to fit an inductive kickback suppression diode on the device's power connections to avoid arcing on the relay contacts and potentially destroying them.**</mark>
+<mark>**If you are planning to use inductive DC loads such as motors or solenoids, it is highly recommended to fit an inductive kickback suppression diode on the device's power connections to prevent arcing on the relay contacts and potentially destroying them.**</mark>
 
 ### 
 
