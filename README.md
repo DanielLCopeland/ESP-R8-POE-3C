@@ -649,14 +649,14 @@ Maximum input terminal and IO terminal voltage: 3.3 volts
 
 ### Links
 
-[blob/main/design_files/SCH_ESP-R8-POE-3C v2_2023-10-08.json](https://github.com/DanielLCopeland/ESP-R8-POE-3C/blob/main/design_files/Gerber_PCB_ESP_R8_POE_3C%20v2.zip))
+[EasyEDA Schematic](https://github.com/DanielLCopeland/ESP-R8-POE-3C/blob/main/design_files/SCH_ESP-R8-POE-3C%20v2_2023-10-08.json)
 
-[EasyEDA PCB layout](blob/main/design_files/PCB_PCB_ESP_R8_POE_3C v2_2023-10-08.json)
+[EasyEDA PCB Layout](https://github.com/DanielLCopeland/ESP-R8-POE-3C/blob/main/design_files/PCB_PCB_ESP_R8_POE_3C%20v2_2023-10-08.json)
 
-[Pick and place file](blob/main/design_files/PickAndPlace_PCB_ESP_R8_POE_3C v2_2023-10-08.csv)
+[Pick and place file](https://github.com/DanielLCopeland/ESP-R8-POE-3C/blob/main/design_files/PickAndPlace_PCB_ESP_R8_POE_3C%20v2_2023-10-08.csv)
 
-[Gerber file](blob/main/design_files/Gerber_PCB_ESP_R8_POE_3C v2.zip)
+[Gerber file](https://github.com/DanielLCopeland/ESP-R8-POE-3C/blob/main/design_files/Gerber_PCB_ESP_R8_POE_3C%20v2.zip)
 
-[PDF schematic](blob/main/design_files/Schematic_ESP-R8-POE-3C v2_2023-10-08.pdf)
+[PDF schematic](https://github.com/DanielLCopeland/ESP-R8-POE-3C/blob/main/design_files/Schematic_ESP-R8-POE-3C%20v2_2023-10-08.pdf)
 
 [License](license.txt)
