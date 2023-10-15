@@ -494,7 +494,7 @@ The two terminals labeled "IO4" and "IO5" are directly connected to the ESP32's 
 
 ### Relay outputs
 
-There are 8 SPDT relays on the ESP-R8-POE-3C which allow control of various types of circuits. They are controlled by a PCF8574 GPIO expander at address 0x23 on the I2C bus. The PCF8574 outputs are "active-low", as in, if you change an output from high to low, the relay for that pin will turn on. It was designed as active-low to avoid relay chatter when the PCF8574 and ESP32 power up so as to not accidentally trigger downstream devices unintentionally.
+There are 8 SPDT relays on the ESP-R8-POE-3C which allow control of various types of circuits. They are controlled by a PCF8574 GPIO expander at address 0x23 on the I2C bus. The PCF8574 outputs are "active-low", as in, if you change an output from high to low, the relay for that pin will turn on. It was designed as active-low to prevent unintentionally triggering the relays when the PCF8574 and ESP32 power up so as to not accidentally activate downstream devices.
 
 The relay outputs are rated at a maximum of 10 amps at 250 volts AC or 30 volts DC (try not to push it right up to these limits. I recommend to leave about 20% or so of overhead). <mark>**Damage or fire may occur if these limits are exceeded.**</mark> Fuses are highly recommended at higher currents to protect the relay from short circuits or excessive current if using an external power supply.  The board's own auxiliary power output is protected by a 750mA resettable PTC fuse if you are using that to power external devices.
 
