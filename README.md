@@ -4,13 +4,13 @@
 
 
 
-### Board Layout
+## Board Layout
 
 ![](images/board_topshot.webp)
 
 
 
-### Requirements
+## Requirements
 
 - TCP/IPv4 network (Wifi or Ethernet).
 
@@ -26,7 +26,7 @@
 
 ### 
 
-### Creating the ESPHome YAML configuration file
+## Creating the ESPHome YAML configuration file
 
 You must have the ESPHome addon installed and running in Homeassistant before proceeding with these steps.
 
@@ -88,7 +88,7 @@ Replace the YAML code in the file with the following example code.  This default
 
 
 
-### YAML Example Configuration
+## YAML Example Configuration
 
 ```yaml
 esphome:
@@ -315,15 +315,15 @@ binary_sensor:
 
 
 
-### Flashing firmware to the ESP-R8-POE-3C using a USB cable
+## Flashing firmware to the ESP-R8-POE-3C using a USB cable
 
-##### 2319 series and up
+### 2319 series and up
 
 Plug a USB-A to USB-C or USB-C to USB-C cable from your computer to the USB-C port on the left side of the board.  Your operating system should already have the drivers for the USB-Serial chip, but if not, click the link below to download and install them.  Mac users may have to disable some security features.
 
 [CP210x USB to UART Bridge VCP Drivers - Silicon Labs](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
 
-##### 2310 series and below
+### 2310 series and below
 
 Plug a USB-Serial programming module from your computer into the H1 programming header, taking care to connect it according to the labeled pinout.  RX on the module goes to TX on the board, and vise-versa.  Connect both grounds together.  Set the module to 3.3 volts if it has such an option.
 
@@ -335,7 +335,7 @@ You will have to put the board into bootloader mode after powerup by holding dow
 
 
 
-##### Power
+### Power
 
 <mark>**If you are using Wifi, please connect an antenna to the antenna connector before powering on the board. If the Wifi radio turns on without a load attached, there is a chance that the ESP32 module may be damaged.**</mark>
 
@@ -355,7 +355,7 @@ Both power supplies may be connected at the same time for redundancy/failover if
 
 
 
-##### Using the ESPHome web interface
+## Using the ESPHome web interface
 
 This requires a compatible browser. In the ESPHome web interface, click the three dots on your new device configuration and select "Install":
 
@@ -393,7 +393,7 @@ Your ESP-R8-POE-3C board should now be online, and Homeassistant should be able 
 
 
 
-##### Using the ESPHome Flasher tool
+## Using the ESPHome Flasher tool
 
 The following section uses the ESPHome Flasher tool.  Download and install it for your operating system at the following URL before proceeding if you do not already have it:
 
@@ -437,7 +437,7 @@ The ESP-R8-POE-3C should now be discoverable by Homeassistant if all goes well.
 
 
 
-### Flashing firmware to the ESP-R8-POE-3C using Wifi and OTA update
+## Flashing firmware to the ESP-R8-POE-3C using Wifi and OTA update
 
 The ESP-R8-POE-3C boards come preloaded with a version of the ESPHome firmware that is configured to broadcast a Wifi AP on first boot and allow you to load custom firmware from a web interface.
 
@@ -453,11 +453,11 @@ If a web browser does not automatically launch after connecting, then just run o
 
 
 
-### Features
+## Features
 
 The follwing section describes various components of the ESP-R8-POE-3C. 
 
-##### Configuration DIP switches
+### Configuration DIP switches
 
 ![](images/dip2.webp)
 
@@ -471,9 +471,9 @@ The bank of DIP switches on the board to the left of the battery holder is inten
 
 - **Switch 4**: Enable or disable the interrupt output of the PCF8574 input expander on GPIO13, which is also exposed on the expansion header.
 
-##### 
+### 
 
-##### Input terminals
+### Input terminals
 
 ![](images/input.webp)
 
@@ -489,9 +489,9 @@ The terminals are connected to a PCF8574 GPIO expander, which is itself connecte
 
 ![](images/input_example.webp)
 
-##### 
+### 
 
-##### GPIO terminals
+### GPIO terminals
 
 ![](images/GPIO.webp)
 
@@ -503,7 +503,7 @@ The two terminals labeled "IO4" and "IO5" are directly connected to the ESP32's 
 
 
 
-##### Relay outputs
+### Relay outputs
 
 There are 8 SPDT relays on the ESP-R8-POE-3C which allow control of various types of circuits. They are controlled by a PCF8574 GPIO expander at address 0x23 on the I2C bus. The PCF8574 outputs are "active-low", as in, if you change an output from high to low, the relay for that pin will turn on. It was designed as active-low to avoid relay chatter when the PCF8574 and ESP32 power up so as to not accidentally trigger downstream devices unintentionally.
 
@@ -523,25 +523,25 @@ NC = Normally closed terminal
 
 <mark>**If you are planning to use inductive DC loads such as motors or solenoids, it is highly recommended to fit an inductive kickback suppression diode on the device's power connections to avoid arcing on the relay contacts and potentially destroying them.**</mark>
 
-##### 
+### 
 
-##### Auxiliary power output
+### Auxiliary power output
 
 ![](images/aux.webp)
 
 The AUX terminal allows you to power external 12 volt DC devices with up to 750mA of total current. Examples of this includes alarm sirens, electric door strikes, LEDs, card readers, motion detectors, and more. A resettable fuse protects against excessive current or short circuits. 
 
-##### 
+### 
 
-##### 12 volt DC Power input
+### 12 volt DC Power input
 
 ![](images/power_input.webp)
 
 This terminal allows you to power the ESP-R8-POE-3C from one of two power sources (the other being PoE from the Ethernet socket). Connect a 12 volt DC supply capable of supplying at least 2 amps of current to this terminal, making sure to observe the correct polarity as marked on the terminal. This power input may be used in conjunction with the PoE power supply as a redundancy or backup. Steering diodes on the board will prevent the power supplies from interfering with each other.
 
-##### 
+### 
 
-##### Ethernet
+### Ethernet
 
 ![](images/ethernet.webp)
 
@@ -563,9 +563,9 @@ Ethernet connectivity is provided by a LAN8720 Ethernet PHY IC capable of runnin
 The PHY_POWER pin (GPIO17) must be pulled high for the 50Mhz oscillator to run.
 There is a pulldown resistor on this pin to give it a default low state which disables the PHY. Connection to this pin is also controlled by configuration DIP switch 3. Turn the switch on to activate the PHY's oscillator, 
 
-##### 
+### 
 
-##### PoE (Power over Ethernet)
+### PoE (Power over Ethernet)
 
 ![](images/bpi7402.webp)
 
@@ -577,9 +577,9 @@ The board will also still provide regulated 12 volt DC power from its auxiliary 
 
 <mark>**Do not remove or insert the BPI-7402 module while the ESP-R8-POE-3C is powered on. There is around 48 volts of PoE power at the input of this module, and while there is a TVS diode to hopefully protect things at the input, mishaps can still happen and send that 48 volts somewhere it is really not supposed to be. It was not designed for hot-swapping in mind.**</mark>
 
-##### 
+### 
 
-##### DS1307 Real time clock
+### DS1307 Real time clock
 
 There is an oboard DS1307 RTC available for use at I2C 0x68. Insert a 3 volt CR1220 coin cell battery into the BT1 battery holder to keep time when the board is powered off.
 
@@ -587,7 +587,7 @@ There is an oboard DS1307 RTC available for use at I2C 0x68. Insert a 3 volt CR1
 
 
 
-##### Expansion header
+### Expansion header
 
 ![](images/expansion.webp)
 
@@ -595,15 +595,15 @@ This header is meant to be used for add-on boards or custom projects/PCBS in wha
 
 <mark>**Please note, when Ethernet is in use, IO17 is used as the PHY_POWER pin and cannot be used on this header at the same time.**</mark>
 
-##### Programming header and buttons
+### Programming header and buttons
 
 ![](images/buttons.webp)
 
 Programming header H1 is provided for you to be able to use a USB-serial module for programming if for whatever reason you do not want to or cannot use the onboard USB-C port. The two buttons will allow you to manually put it into bootloader mode by holding down both at the same time, releasing the "EN" button, and then after waiting for one second, releasing the "BOOT" button. A regular reset can be done by pressing "EN" once.
 
-##### 
+###
 
-##### Antenna connector
+### Antenna connector
 
 ![](images/antenna.webp)
 
@@ -611,17 +611,17 @@ A standard female SMA connector is provided to have the option of using any sort
 
 <mark>**Please connect an antenna before powering on the ESP-R8-POE-3C when using Wifi. If the Wifi radio turns on without a load attached, there is a chance that the ESP32 module may be damaged.**</mark>
 
-### 
+## 
 
-### Notes
+## Notes
 
-- There are six mounting holes on the PCB which will accomodate M3 screws to mount the board to standoffs or other mounting hardware. The top five holes have their annular rings connected to the common system ground, and can be connected to Earth ground for additional ESD safety.
+- There are six mounting holes on the PCB which will accomodate M3 screws to mount the board to standoffs or other mounting hardware. The top five holes have their annular rings connected to the common system ground, and can be connected to Earth ground for additional ESD protection.
 
 - When using a separate power supply to power downstream devices through the relays, it is recommended to install a fuse to avoid burning out the relay contacts in case of a fault if it does not already have a means to limit the current.
 
-### 
+## 
 
-### Technical specifications
+## Technical specifications
 
 Input voltage (external): 12 volts
 
@@ -645,9 +645,9 @@ Maximum relay contact voltage (DC): 28 volts
 
 Maximum input terminal and IO terminal voltage: 3.3 volts
 
-### 
+## 
 
-### Links
+## Links
 
 [EasyEDA Schematic](https://github.com/DanielLCopeland/ESP-R8-POE-3C/blob/main/design_files/SCH_ESP-R8-POE-3C%20v2_2023-10-08.json)
 
