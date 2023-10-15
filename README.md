@@ -527,7 +527,7 @@ NC = Normally closed terminal
 
 ##### Auxiliary power output
 
-![](images/antenna.webp)
+![](images/aux.webp)
 
 The AUX terminal allows you to power external 12 volt DC devices with up to 750mA of total current. Examples of this includes alarm sirens, electric door strikes, LEDs, card readers, motion detectors, and more. A resettable fuse protects against excessive current or short circuits. 
 
