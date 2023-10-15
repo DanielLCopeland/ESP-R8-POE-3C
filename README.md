@@ -304,7 +304,7 @@ binary_sensor:
 
 
 
-## Flashing firmware to the ESP-R8-POE-3C using a USB cable
+## Flashing firmware to the ESP-R8-POE-3C
 
 ### 2319 series and up
 
