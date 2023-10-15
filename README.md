@@ -300,17 +300,6 @@ binary_sensor:
       number: 7
       mode: INPUT
     name: "Input 8"
-
-  - platform: gpio
-    id: GPIO13
-    pin:
-      number: 13
-      mode: INPUT_PULLUP
-  - platform: gpio
-    id: GPIO17
-    pin:
-      number: 17
-      mode: INPUT_PULLUP
 ```
 
 
