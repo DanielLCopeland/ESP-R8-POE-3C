@@ -344,7 +344,7 @@ Both power supplies may be connected at the same time for redundancy/failover if
 
 
 
-## Using the ESPHome web interface
+### Flashing firmware to the ESP-R8-POE-3C using the ESPHome web interface
 
 This requires a compatible browser. In the ESPHome web interface, click the three dots on your new device configuration and select "Install":
 
@@ -382,7 +382,7 @@ Your ESP-R8-POE-3C board should now be online, and Homeassistant should be able 
 
 
 
-## Using the ESPHome Flasher tool
+### Flashing firmware to the ESP-R8-POE-3C using the ESPHome Flasher tool
 
 The following section uses the ESPHome Flasher tool.  Download and install it for your operating system at the following URL before proceeding if you do not already have it:
 
@@ -426,7 +426,7 @@ The ESP-R8-POE-3C should now be discoverable by Homeassistant if all goes well.
 
 
 
-## Flashing firmware to the ESP-R8-POE-3C using Wifi and OTA update
+### Flashing firmware to the ESP-R8-POE-3C using Wifi and OTA update
 
 The ESP-R8-POE-3C boards come preloaded with a version of the ESPHome firmware that is configured to broadcast a Wifi AP on first boot and allow you to load custom firmware from a web interface.
 
