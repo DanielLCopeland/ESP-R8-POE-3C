@@ -649,7 +649,7 @@ Maximum input terminal and IO terminal voltage: 3.3 volts
 
 ### Links
 
-[EasyEDA schematic](blob/main/design_files/SCH_ESP-R8-POE-3C v2_2023-10-08.json)
+[blob/main/design_files/SCH_ESP-R8-POE-3C v2_2023-10-08.json](https://github.com/DanielLCopeland/ESP-R8-POE-3C/blob/main/design_files/Gerber_PCB_ESP_R8_POE_3C%20v2.zip))
 
 [EasyEDA PCB layout](blob/main/design_files/PCB_PCB_ESP_R8_POE_3C v2_2023-10-08.json)
 
